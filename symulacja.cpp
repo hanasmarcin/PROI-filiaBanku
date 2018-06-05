@@ -51,8 +51,10 @@ void symulacja::wczytaj_klientow()
     else
     {
         string w="Wystapil problem z plikiem.";
+	plik.close();
         throw w;
     }
+    plik.close();
 }
 
 
@@ -475,7 +477,8 @@ void symulacja::test (int l_cykli)
         log << "Wplatomatu: "<< kolejka_wplatomat.size() << endl;
         log << "Obslugi klienta: "<< kolejka_obsluga_klienta.size() << endl;
 
-        sleep(2);
+        sleep(3);
     }
+    log.close();
     return;
 }

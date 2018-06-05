@@ -29,9 +29,11 @@ void bank::wczytaj_pracownikow(int l_okienek)
     }
     else
     {
-    string w="Wystapil problem z plikiem.";
+    	string w="Wystapil problem z plikiem.";
+	plik.close();
         throw w;
     }
+    plik.close();
 }
 
 bank::~bank()
